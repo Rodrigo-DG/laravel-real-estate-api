@@ -12,7 +12,7 @@ class ClientSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('clents')->insert([
+        DB::table('clients')->insert([
             [
                 'name' => 'John Doe',
                 'email' => 'john@example.com',
