@@ -7,60 +7,131 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Sobre el Proyecto
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Este proyecto es una API de bienes raíces construida con Laravel. Permite gestionar propiedades, clientes y visitas, ofreciendo una forma sencilla de realizar operaciones CRUD a través de endpoints RESTful.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Configuración del Entorno de Desarrollo
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. **Clona el repositorio:**
 
-## Learning Laravel
+   ```bash
+   git clone https://github.com/Rodrigo-DG/laravel-real-estate-api.git
+   cd laravel-real-estate-api
+   ```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+2. **Instala las dependencias de Composer:**
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+   ```bash
+   composer install
+   ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+3. **Instala las dependencias de NPM:**
 
-## Laravel Sponsors
+   ```bash
+   npm install
+   ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+4. **Configura el archivo `.env`:**
 
-### Premium Partners
+   - Crea una copia del archivo de ejemplo:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+   ```bash
+   cp .env.example .env
+   ```
 
-## Contributing
+   - Edita el archivo `.env` y configura tus credenciales de base de datos.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+5. **Genera la clave de la aplicación:**
 
-## Code of Conduct
+   ```bash
+   php artisan key:generate
+   ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+6. **Ejecuta las migraciones y los seeders:**
 
-## Security Vulnerabilities
+   ```bash
+   php artisan migrate --seed
+   ```
+7. **Ejecuta el comando para almacenar en caché las rutas:**
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+   ```bash
+   php artisan route:cache
+   ```
 
-## License
+8. **Inicia el servidor de desarrollo:**
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+   ```bash
+   php artisan serve
+   ```
+
+9. **Inicia sesión en el sistema:**
+
+   Usa las siguientes credenciales:
+
+   - **Email:** demo@demo.com
+   - **Password:** demo1234
+
+## Endpoints de la API
+
+### Propiedades
+
+- **Obtener todas las propiedades:**  
+  `GET /api/properties/index`
+
+- **Obtener una propiedad por ID:**  
+  `GET /api/properties/manage/{id}`
+  Muestra el formulario para crear una nueva propiedad o editar una existente.
+
+- **Crear una nueva propiedad:**  
+  `POST /api/properties/create-property`
+
+- **Actualizar una propiedad:**  
+  `POST /api/properties/update-property/{id}`
+
+- **Eliminar una propiedad:**  
+  `DELETE /api/properties/delete-property/{id}`
+
+### Clientes
+
+- **Obtener todos los clientes:**  
+  `GET /api/clients/index`
+
+- **Obtener un cliente por ID:**  
+  `GET /api/clients/manage/{id}`
+  Muestra el formulario para crear un nuevo cliente o editar uno existente.
+
+- **Crear un nuevo cliente:**  
+  `POST /api/clients/create-client`
+
+- **Actualizar un cliente:**  
+  `POST /api/clients/update-client/{id}`
+
+- **Eliminar un cliente:**  
+  `DELETE /api/clients/delete-client/{id}`
+
+### Visitas
+
+- **Obtener todas las visitas:**  
+  `GET /api/visits/index`
+
+- **Obtener una visita por ID:**  
+  `GET /api/visits/manage/{id}`
+  Muestra el formulario para crear una nueva visita o editar una existente.
+
+- **Crear una nueva visita:**  
+  `POST /api/visits/create-visit`
+
+- **Actualizar una visita:**  
+  `POST /api/visits/update-visit/{id}`
+
+- **Eliminar una visita:**  
+  `DELETE /api/visits/delete-visit/{id}`
+
+## Contribuciones
+
+Si deseas contribuir al proyecto, no dudes en enviar un pull request o abrir un issue.
+
+## Licencia
+
+Este proyecto está licenciado bajo la [MIT License](https://opensource.org/licenses/MIT).

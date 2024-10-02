@@ -8,47 +8,54 @@
                   />
                 </svg>
               </span>
-            <span class="text">{{ __('Dashboard') }}</span>
-        </a>
-    </li>
-
-    <li class="nav-item @if(request()->routeIs('users.index')) active @endif">
-        <a href="{{ route('users.index') }}">
-              <span class="icon">
-                <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                </svg>
-              </span>
-            <span class="text">{{ __('Users') }}</span>
-        </a>
-    </li>
-
-    <li class="nav-item @if(request()->routeIs('about')) active @endif">
-        <a href="{{ route('about') }}">
-            <span class="icon">
-                <svg width="22" height="22" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-                    <path d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
-                </svg>
-            </span>
-            <span class="text">{{ __('About us') }}</span>
+            <span class="text">{{ __('Inicio') }}</span>
         </a>
     </li>
 
     <li class="nav-item nav-item-has-children">
         <a class="collapsed" href="#0" class="" data-bs-toggle="collapse" data-bs-target="#ddmenu_1"
            aria-controls="ddmenu_1" aria-expanded="true" aria-label="Toggle navigation">
-            <span class="icon">
-                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                            d="M12.8334 1.83325H5.50008C5.01385 1.83325 4.54754 2.02641 4.20372 2.37022C3.8599 2.71404 3.66675 3.18036 3.66675 3.66659V18.3333C3.66675 18.8195 3.8599 19.2858 4.20372 19.6296C4.54754 19.9734 5.01385 20.1666 5.50008 20.1666H16.5001C16.9863 20.1666 17.4526 19.9734 17.7964 19.6296C18.1403 19.2858 18.3334 18.8195 18.3334 18.3333V7.33325L12.8334 1.83325ZM16.5001 18.3333H5.50008V3.66659H11.9167V8.24992H16.5001V18.3333Z">
-                    </path>
-                </svg>
-            </span>
-            <span class="text">Two-level menu</span>
+            <i class="lni lni-home"></i>
+            <span class="text ms-3">Propiedades</span>
         </a>
         <ul id="ddmenu_1" class="dropdown-nav collapse" style="">
             <li>
-                <a href="#">Child menu</a>
+                <a href="{{ route('index.properties') }}">Lista de propiedades</a>
+            </li>
+            <li>
+                <a href="{{ route('manage.properties') }}">Crear propiedad</a>
+            </li>
+        </ul>
+    </li>
+
+    <li class="nav-item nav-item-has-children">
+        <a class="collapsed" href="#0" class="" data-bs-toggle="collapse" data-bs-target="#ddmenu_2"
+           aria-controls="ddmenu_2" aria-expanded="true" aria-label="Toggle navigation">
+            <i class="lni lni-users"></i>
+            <span class="text ms-3">Clientes</span>
+        </a>
+        <ul id="ddmenu_2" class="dropdown-nav collapse" style="">
+            <li>
+                <a href="{{ route('index.clients') }}">Lista de clientes</a>
+            </li>
+            <li>
+                <a href="{{ route('manage.clients') }}">Crear cliente</a>
+            </li>
+        </ul>
+    </li>
+
+    <li class="nav-item nav-item-has-children">
+        <a class="collapsed" href="#0" class="" data-bs-toggle="collapse" data-bs-target="#ddmenu_3"
+           aria-controls="ddmenu_3" aria-expanded="true" aria-label="Toggle navigation">
+            <i class="lni lni-calendar"></i>
+            <span class="text ms-3">Solicitudes de visitas</span>
+        </a>
+        <ul id="ddmenu_3" class="dropdown-nav collapse" style="">
+            <li>
+                <a href="{{ route('index.visits') }}">Lista de visitas</a>
+            </li>
+            <li>
+                <a href="{{ route('manage.visits') }}">Crear visita</a>
             </li>
         </ul>
     </li>
