@@ -32,7 +32,13 @@ Este proyecto es una API de bienes raíces construida con Laravel. Permite gesti
    npm install
    ```
 
-4. **Configura el archivo `.env`:**
+4. **Compila los activos:**
+
+   ```bash
+   npm run build
+   ```   
+
+5. **Configura el archivo `.env`:**
 
    - Crea una copia del archivo de ejemplo:
 
@@ -42,30 +48,30 @@ Este proyecto es una API de bienes raíces construida con Laravel. Permite gesti
 
    - Edita el archivo `.env` y configura tus credenciales de base de datos.
 
-5. **Genera la clave de la aplicación:**
+6. **Genera la clave de la aplicación:**
 
    ```bash
    php artisan key:generate
    ```
 
-6. **Ejecuta las migraciones y los seeders:**
+7. **Ejecuta las migraciones y los seeders:**
 
    ```bash
    php artisan migrate --seed
    ```
-7. **Ejecuta el comando para almacenar en caché las rutas:**
+8. **Ejecuta el comando para almacenar en caché las rutas:**
 
    ```bash
    php artisan route:cache
    ```
 
-8. **Inicia el servidor de desarrollo:**
+9. **Inicia el servidor de desarrollo:**
 
    ```bash
    php artisan serve
    ```
 
-9. **Inicia sesión en el sistema:**
+10. **Inicia sesión en el sistema:**
 
    Usa las siguientes credenciales:
 
