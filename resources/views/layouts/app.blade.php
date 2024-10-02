@@ -15,6 +15,30 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    <style>
+        .toast {
+            opacity: 1 !important; /* Asegúrate de que la opacidad sea 1 */
+            transition: opacity 0.5s ease-in-out; /* Agrega una transición para suavizar la aparición */
+            background-color: #333 !important; /* Fondo oscuro para asegurar visibilidad */
+            color: #fff !important; /* Color del texto */
+        }
+
+        .toast-success {
+            background-color: #28a745 !important; /* Verde para mensajes de éxito */
+        }
+
+        .toast-error {
+            background-color: #dc3545 !important; /* Rojo para mensajes de error */
+        }
+
+        .toast-info {
+            background-color: #17a2b8 !important; /* Azul para mensajes de información */
+        }
+
+        .toast-warning {
+            background-color: #ffc107 !important; /* Amarillo para mensajes de advertencia */
+        }
+    </style>
     @vite('resources/sass/app.scss')
 </head>
 <body>
